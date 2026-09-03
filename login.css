@@ -1,0 +1,385 @@
+/* =========================================
+   RESET DASAR
+   ========================================= */
+
+/* Menghilangkan margin dan padding bawaan browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+
+    /* Tinggi minimal satu layar penuh */
+    min-height: 100vh;
+
+    /* Menggunakan Flexbox untuk memposisikan login */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Warna background */
+    background:
+        radial-gradient(circle at top, #34205c, transparent 40%),
+        linear-gradient(135deg, #10051f, #1b0b31, #08030f);
+
+    /* Font */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Warna teks */
+    color: white;
+
+    /* Supaya tidak ada scroll horizontal */
+    overflow: hidden;
+
+    /* Jarak di HP */
+    padding: 20px;
+}
+
+
+/* =========================================
+   BACKGROUND BINTANG
+   ========================================= */
+
+.stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.7;
+
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, white 1px, transparent 1px);
+
+    background-size:
+        80px 80px,
+        130px 130px;
+
+    background-position:
+        0 0,
+        40px 60px;
+
+    animation: moveStars 15s linear infinite;
+}
+
+
+/* Animasi background bintang */
+
+@keyframes moveStars {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-80px);
+    }
+
+}
+
+
+/* =========================================
+   LOGIN CONTAINER
+   ========================================= */
+
+.login-container {
+
+    /* Lebar maksimal */
+    width: 100%;
+    max-width: 420px;
+
+    /* Warna kotak */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Efek transparan */
+    backdrop-filter: blur(15px);
+
+    /* Border */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* Sudut */
+    border-radius: 25px;
+
+    /* Jarak isi */
+    padding: 40px;
+
+    /* Bayangan */
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    /* Posisi supaya di atas background */
+    position: relative;
+
+    z-index: 2;
+
+    /* Animasi muncul */
+    animation: fadeIn 1s ease;
+}
+
+
+/* Animasi login muncul */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.login-icon {
+
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+
+/* =========================================
+   JUDUL
+   ========================================= */
+
+h1 {
+
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* Subtitle */
+
+.subtitle {
+
+    text-align: center;
+
+    color: #d8cce8;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.input-box {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Label */
+
+.input-box label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    color: #ddd;
+
+}
+
+
+/* Kotak input */
+
+.input-box input {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+/* Placeholder */
+
+.input-box input::placeholder {
+
+    color: #aaa;
+
+}
+
+
+/* Ketika input diklik */
+
+.input-box input:focus {
+
+    border-color: #c9a7ff;
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.2);
+
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+   ========================================= */
+
+#errorMessage {
+
+    text-align: center;
+
+    color: #ff8f9f;
+
+    font-size: 14px;
+
+    min-height: 20px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #a875ff,
+        #e19cff
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+/* Ketika mouse diarahkan ke button */
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(190, 120, 255, 0.35);
+
+}
+
+
+/* Ketika button ditekan */
+
+button:active {
+
+    transform: scale(0.97);
+
+}
+
+
+/* =========================================
+   TEXT BAWAH
+   ========================================= */
+
+.bottom-text {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 12px;
+
+    color: #aaa;
+
+}
+
+
+/* =========================================
+   RESPONSIVE HP
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .login-container {
+
+        padding: 30px 22px;
+
+    }
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+}

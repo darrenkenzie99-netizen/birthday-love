@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Supaya tampilan responsive di HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome ✨</title>
+
+    <!-- Menghubungkan HTML dengan CSS login -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- Background dekorasi -->
+    <div class="stars"></div>
+
+    <!-- Kotak utama login -->
+    <div class="login-container">
+
+        <!-- Icon kecil di atas -->
+        <div class="login-icon">
+            🎂
+        </div>
+
+        <!-- Judul -->
+        <h1>Welcome</h1>
+
+        <!-- Subtitle -->
+        <p class="subtitle">
+            Something special is waiting for you ✨
+        </p>
+
+        <!-- Form Login -->
+        <form id="loginForm">
+
+            <!-- Input username -->
+            <div class="input-box">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Masukkan username"
+                    autocomplete="off"
+                    required
+                >
+
+            </div>
+
+            <!-- Input password -->
+            <div class="input-box">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Masukkan password"
+                    required
+                >
+
+            </div>
+
+            <!-- Pesan error -->
+            <p id="errorMessage"></p>
+
+            <!-- Tombol Login -->
+            <button type="submit">
+                Login ✨
+            </button>
+
+        </form>
+
+        <!-- Tulisan kecil -->
+        <p class="bottom-text">
+            A little surprise is waiting inside 💌
+        </p>
+
+    </div>
+
+    <!-- Menghubungkan HTML dengan JavaScript -->
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
